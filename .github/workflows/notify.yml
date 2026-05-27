@@ -1,0 +1,53 @@
+name: Notify
+
+# 다른 워크플로우 종료 시 Slack/Discord 채널로 알림.
+# 설정: NOTIFY_WEBHOOK_URL 시크릿 등록 (설정 명료: docs/AUTOMATION.md 섬션 7)
+# Slack: 재단 이니세이팅 웹훅 URL
+# Discord: 웹훅 URL 끝에 '/slack' 추가
+
+on:
+  workflow_run:
+    workflows:
+      - "Sync to Dewy"
+      - "Validate Skills"
+      - "Build Dashboard"
+    types: [completed]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
+    steps:
+      - name: Skip if no webhook configured
+        id: gate
+        env:
+          WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+        run: |
+          if [ -z "$WEBHOOK" ]; then
+            echo "NOTIFY_WEBHOOK_URL not set — skipping (this is fine)."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Send Slack-compatible notification
+        if: steps.gate.outputs.skip == 'false'
+        env:
+          WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+          STATUS: ${{ github.event.workflow_run.conclusion }}
+          WORKFLOW: ${{ github.event.workflow_run.name }}
+          URL: ${{ github.event.workflow_run.html_url }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+          ACTOR: ${{ github.event.workflow_run.actor.login }}
+        run: |
+          case "$STATUS" in
+            success)   ICON=":white_check_mark:"; LABEL="성공" ;;
+            failure)   ICON=":x:"; LABEL="실패" ;;
+            cancelled) ICON=":no_entry_sign:"; LABEL="취소" ;;
+            *)         ICON=":grey_question:"; LABEL="$STATUS" ;;
+          esac
+          TEXT="$ICON *$WORKFLOW* $LABEL\n· 브랜치: \`$BRANCH\`\n· 실행: $ACTOR\n· <$URL|로그 보기>"
+          PAYLOAD=$(printf '{"text": "%s"}' "$TEXT")
+          curl -sS -X POST -H 'Content-Type: application/json' \
+            --data "$PAYLOAD" "$WEBHOOK"
+          echo ""

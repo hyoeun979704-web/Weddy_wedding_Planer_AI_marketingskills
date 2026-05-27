@@ -1,0 +1,157 @@
+{
+  "categories": {
+    "콘텐츠": "랜딩 페이지·광고·소셜 콘텐츠",
+    "전환": "설치 → 구매 전환율 최적화",
+    "발견": "검색·앱스토어 노출",
+    "유료광고": "네이버·카카오·구글·메타 캠페인",
+    "전략": "서비스 전략·리서치·가격",
+    "유지": "리텐션·이탈 방지",
+    "성장공학": "추천·공동마케팅·무료도구",
+    "B2B": "세일즈·매출운영",
+    "실험·분석": "A/B 실험·지표 추적"
+  },
+  "customized": [
+    {
+      "name": "copywriting",
+      "name_ko": "카피라이팅",
+      "category": "콘텐츠",
+      "summary": "한국어 존댓말 웨딩 톤, 고객 어휘, 채널별 글자수 맞춤 카피 작성",
+      "examples": [
+        "Premium 구독 paywall 카피 다듬어줘",
+        "랜딩 페이지 헤드라인 5개 변형 만들어줘",
+        "네이버 광고 제목 15자 맞춤으로 써줘"
+      ]
+    },
+    {
+      "name": "cro",
+      "name_ko": "전환율 최적화",
+      "category": "전환",
+      "summary": "설치→D-Day→AI→하트→Premium 5단계 퍼널 진단·개입",
+      "examples": [
+        "하트 첫 구매 전환율 올리고 싶어",
+        "Premium 구독 전환으로 이어지는 게 적은데 왜?",
+        "설치 후 D-Day 입력 까지 몇 프로세스 개선해줘"
+      ]
+    },
+    {
+      "name": "aso",
+      "name_ko": "앱 스토어 최적화",
+      "category": "발견",
+      "summary": "Google Play 한국 스토어 등록 정보·키워드·스크린샷 카피",
+      "examples": [
+        "Play Store 자세한 설명 갤아주세요",
+        "앱 이름 30자 후보 몇 개 제안해줘",
+        "스크린샷 순서 재정렬 제안"
+      ]
+    },
+    {
+      "name": "ads",
+      "name_ko": "유료 광고",
+      "category": "유료광고",
+      "summary": "네이버 GFA + 카카오모먼트 우선, Google·Meta 보조 캠페인 설계",
+      "examples": [
+        "네이버 검색광고 키워드 그룹 잔아줘",
+        "카카오모먼트 캠페인 소재 5개",
+        "월 광고비 200만원 강채널별 분배 제안"
+      ]
+    },
+    {
+      "name": "social",
+      "name_ko": "소셜 미디어",
+      "category": "콘텐츠",
+      "summary": "인스타 릴스, 네이버 블로그, YouTube Shorts, KakaoStory 채널별 전략",
+      "examples": [
+        "이번 주 인스타 릴스 콘텐츠 3개 주제",
+        "네이버 블로그 SEO 맞춤 장문 구조 짜줘",
+        "YouTube Shorts 30초 스크립트"
+      ]
+    },
+    {
+      "name": "seo-audit",
+      "name_ko": "SEO 진단",
+      "category": "발견",
+      "summary": "네이버 + 구글 듀얼 SEO. 한국 웨딩 키워드 클러스터 진단",
+      "examples": [
+        "dewy-wedding.com 의 네이버 노출 높이는 방안",
+        "우리 사이트 SEO 철 점수 키워드 찾아줘",
+        "블로그 키워드 전략 30개 제안"
+      ]
+    },
+    {
+      "name": "customer-research",
+      "name_ko": "고객 조사",
+      "category": "전략",
+      "summary": "D-Day 단계별 한국 예비 신랑·신부 인터뷰·설문 설계",
+      "examples": [
+        "고객 설문지 설계해줘",
+        "논 인터뷰 질문지 30분짜리",
+        "우리 페르소나 다시 검증하고 싶어"
+      ]
+    },
+    {
+      "name": "pricing",
+      "name_ko": "가격 정책",
+      "category": "전략",
+      "summary": "하트(Toss) + Premium(KakaoPay) + B2B 3양종 가격 구조 검토",
+      "examples": [
+        "Premium 연간 구독 할인율 적정성 검토",
+        "스타터 패키지 1,900원 적절한가?",
+        "경쟁사 대비 가격 포지셔닝 재수립"
+      ]
+    },
+    {
+      "name": "onboarding",
+      "name_ko": "온보딩",
+      "category": "전환",
+      "summary": "설치 → 첫 D-Day 입력 → AI 플래너 첫 질문 골든패스 설계",
+      "examples": [
+        "설치 후 첫 D-Day 입력율 높이고 싶어",
+        "날짜 아직 모르는 유저 세그먼트 처리",
+        "첫 AI 질문으로 유도하는 워딩 제안"
+      ]
+    },
+    {
+      "name": "churn-prevention",
+      "name_ko": "이탈 방지",
+      "category": "유지",
+      "summary": "예식일 직후 churn 절벽 대응, 구독 해지 save offer, 재활성화 캘�니",
+      "examples": [
+        "결혼 후 30일 이탈 대응 전략",
+        "Premium 해지 클릭 후 save offer 설계",
+        "결제 실패 dunning 흐름 잤아줘"
+      ]
+    }
+  ],
+  "upstream": [
+    {"name": "ab-testing", "name_ko": "A/B 테스트", "category": "실험·분석", "summary": "A/B 실험 설계·실행·분석"},
+    {"name": "ad-creative", "name_ko": "광고 소재", "category": "유료광고", "summary": "헤드라인·설명·설도적 트레이트·전체 광고 세트 자동 생성"},
+    {"name": "ai-seo", "name_ko": "AI 검색 SEO", "category": "발견", "summary": "Gemini·Perplexity·ChatGPT AI 검색엔진 인용 최적화"},
+    {"name": "analytics", "name_ko": "분석 트래킹", "category": "실험·분석", "summary": "GA4·이벤트 추적 설정·감사"},
+    {"name": "co-marketing", "name_ko": "공동 마케팅", "category": "성장공학", "summary": "파트너 발굴·공동 캐페인 기획"},
+    {"name": "cold-email", "name_ko": "콜드 이메일 (B2B)", "category": "B2B", "summary": "웨딩 업체 출폈 이메일 시퀀스"},
+    {"name": "community-marketing", "name_ko": "커뮤니티 마케팅", "category": "성장공학", "summary": "맘이뜰·디자인의능력·웨딩카페 운영"},
+    {"name": "competitor-profiling", "name_ko": "경쟁사 프로파일링", "category": "전략", "summary": "URL 기반 경쟁사 자동 조사·분석"},
+    {"name": "competitors", "name_ko": "비교·대안 페이지", "category": "콘텐츠", "summary": "\"웨딩북 vs Dewy\" 같은 비교 페이지 제작"},
+    {"name": "content-strategy", "name_ko": "콘텐츠 전략", "category": "콘텐츠", "summary": "D-Day 구간별 콘텐츠 매핑·캘린더"},
+    {"name": "copy-editing", "name_ko": "카피 편집", "category": "콘텐츠", "summary": "기존 카피 존댓말·수치·표현 일관성 교열"},
+    {"name": "directory-submissions", "name_ko": "디렉토리 등록", "category": "발견", "summary": "네이버 스마트스토어·개봐·프로덕트헌트 등록"},
+    {"name": "emails", "name_ko": "라이프사이클 이메일", "category": "유지", "summary": "D-Day 기준 자동 이메일 시퀀스 + 카카오 알림톡"},
+    {"name": "free-tools", "name_ko": "무료 도구", "category": "성장공학", "summary": "예산 계산기·결혼 철크리스트 같은 리드 도구"},
+    {"name": "image", "name_ko": "이미지 제작", "category": "콘텐츠", "summary": "AI 드레스 Before/After 등 소셜·광고 이미지 자동 생성"},
+    {"name": "launch", "name_ko": "제품 런치", "category": "전략", "summary": "iOS 출시·신규 기능 런치 워딩"},
+    {"name": "lead-magnets", "name_ko": "리드 자석", "category": "성장공학", "summary": "PDF 체크리스트·스드메 견적 표 같은 이메일 모으기"},
+    {"name": "marketing-ideas", "name_ko": "마케팅 아이디어", "category": "전략", "summary": "140개 SaaS 마케팅 아이디어 중 Dewy 적용 가능한 것 추린다운"},
+    {"name": "marketing-psychology", "name_ko": "마케팅 심리학", "category": "전략", "summary": "손실회피·사회적증명·권위 강력"},
+    {"name": "paywalls", "name_ko": "페이월", "category": "전환", "summary": "Premium 업그레이드 화면·구독 전환 최적화"},
+    {"name": "popups", "name_ko": "팝업·모달", "category": "전환", "summary": "앱 내 팝업·모달·슬라이드인 설계"},
+    {"name": "product-marketing", "name_ko": "제품 마케팅 컨텍스트", "category": "전략", "summary": ".agents/product-marketing.md 이미 사전 작성 완료 — 업데이트 시에만 호출"},
+    {"name": "programmatic-seo", "name_ko": "프로그래매틱 SEO", "category": "발견", "summary": "지역 X 시가 X 예산 조합 페이지 양산"},
+    {"name": "referrals", "name_ko": "추천 프로그램", "category": "성장공학", "summary": "커플 초대코드 활용 추천 보상·명자손 커플 메컬"},
+    {"name": "revops", "name_ko": "매출 운영", "category": "B2B", "summary": "B2B 웨딩 업체 리드 라이프사이클·스코어링·라우팅"},
+    {"name": "sales-enablement", "name_ko": "세일즈 이네이블먼트", "category": "B2B", "summary": "제안서·원페이저·데모 스크립트 자료"},
+    {"name": "schema", "name_ko": "스키마 마크업", "category": "발견", "summary": "LocalBusiness·FAQPage·Product 구조화 데이터"},
+    {"name": "signup", "name_ko": "가입 흐름", "category": "전환", "summary": "구글·카카오 소셜·제14세 필터 가입 단계 최적화"},
+    {"name": "site-architecture", "name_ko": "사이트 구조", "category": "발견", "summary": "dewy-wedding.com 페이지 계층·URL·내부링크"},
+    {"name": "video", "name_ko": "비디오", "category": "콘텐츠", "summary": "YouTube Shorts 우선, AI 드레스 시연 슏츠"}
+  ]
+}

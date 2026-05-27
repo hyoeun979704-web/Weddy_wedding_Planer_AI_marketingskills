@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dewy Marketing Skills 대시보드</title>
+<meta name="description" content="Dewy(듀이) 한국 웨딩 AI 플래너를 위한 마케팅 스킬 카탈로그">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Dewy Marketing Skills</h1>
+      <p class="sub">한국 웨딩 AI 플래너 <a href="https://dewy-wedding.com" target="_blank" rel="noopener">듀이</a> 에 최적화된 마케팅 스킬 <strong>__CUSTOMIZED_COUNT__</strong>종 + 업스트림 <strong>__UPSTREAM_COUNT__</strong>종</p>
+      <div class="badges">
+        <a href="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills/actions/workflows/validate.yml" target="_blank" rel="noopener">
+          <img src="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills/actions/workflows/validate.yml/badge.svg" alt="validate status">
+        </a>
+        <a href="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills/actions/workflows/build-dashboard.yml" target="_blank" rel="noopener">
+          <img src="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills/actions/workflows/build-dashboard.yml/badge.svg" alt="build dashboard">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="controls">
+  <input type="search" id="search" placeholder="스킬 검색 (한글 또는 영문)" autocomplete="off">
+  <div id="filters" class="filters" aria-label="카테고리 필터"></div>
+</section>
+
+<main>
+  <h2 class="section-title">Dewy 맞춤 스킬 <span class="count" id="cust-count"></span></h2>
+  <p class="section-sub">이 레포에서 한국 웨딩 시장·Dewy 수익구조에 맞춰 재작성된 스킬입니다.</p>
+  <div id="grid-customized" class="grid"></div>
+
+  <h2 class="section-title">업스트림 스킬 <span class="count" id="up-count"></span></h2>
+  <p class="section-sub">
+    <a href="https://github.com/coreyhaines31/marketingskills" target="_blank" rel="noopener">coreyhaines31/marketingskills</a>
+    에서 그대로 가져온 스킬. <code>.agents/product-marketing.md</code> 자동 주입으로 Dewy 맥락으로 작동.
+    <a href="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills/blob/main/references/upstream-skills-map.md" target="_blank" rel="noopener">매핑 가이드</a>
+  </p>
+  <div id="grid-upstream" class="grid"></div>
+</main>
+
+<footer>
+  <p>빌드: <code>__BUILD_SHA__</code> &middot; __BUILD_DATE__</p>
+  <p>
+    <a href="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills" target="_blank" rel="noopener">레포</a> &middot;
+    <a href="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills/blob/main/.agents/product-marketing.md" target="_blank" rel="noopener">Dewy 컨텍스트</a> &middot;
+    <a href="https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills/blob/main/references/korean-wedding-market.md" target="_blank" rel="noopener">한국 웨딩 시장</a>
+  </p>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script id="data" type="application/json">__DATA_JSON__</script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate skills frontmatter
+        run: bash scripts/validate.sh skills
+
+      - name: Check shell scripts syntax
+        run: |
+          for f in scripts/*.sh; do
+            bash -n "$f" && echo "OK   $f"
+          done
+
+      - name: Check required top-level files
+        run: |
+          test -f README.md
+          test -f CLAUDE.md
+          test -f .claude-plugin/plugin.json
+          test -f .claude-plugin/marketplace.json
+          test -f .agents/product-marketing.md
+          test -f references/korean-wedding-market.md
+          test -f references/upstream-skills-map.md
+          echo "✓ 필수 파일 모두 존재"
