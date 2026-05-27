@@ -13,8 +13,19 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    # DEWY_SYNC_TOKEN 시크릿이 존재해야 동작. 설정 가이드: docs/AUTOMATION.md
+    # 다음 두 시크릿이 필요. 설정 가이드: docs/AUTOMATION.md
+    #   - DEWY_SYNC_APP_ID         : GitHub App ID (숫자)
+    #   - DEWY_SYNC_APP_PRIVATE_KEY : GitHub App private key (.pem 전체 내용)
     steps:
+      - name: Mint GitHub App token (Dewy repo)
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.DEWY_SYNC_APP_ID }}
+          private-key: ${{ secrets.DEWY_SYNC_APP_PRIVATE_KEY }}
+          owner: hyoeun979704-web
+          repositories: Weddig-Planer-AI-Dewy
+
       - name: Checkout marketingskills (this repo)
         uses: actions/checkout@v4
         with:
@@ -25,7 +36,7 @@ jobs:
         with:
           repository: hyoeun979704-web/Weddig-Planer-AI-Dewy
           path: dewy
-          token: ${{ secrets.DEWY_SYNC_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           ref: main
 
       - name: Sync skills + references
@@ -67,7 +78,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           path: dewy
-          token: ${{ secrets.DEWY_SYNC_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           branch: bot/sync-dewy-marketing-skills
           delete-branch: true
           base: main
@@ -84,7 +95,7 @@ jobs:
             - `.agents/scripts/update.sh`
             - `.agents/.dewy-marketingskills.version`
 
-            **보호 대상** (하는 로컬 수정 안 던침):
+            **보호 대상** (로컬 수정 덮어쓰지 않음):
             - `.agents/product-marketing.md` — 이미 존재하면 그대로 둡니다. upstream 변경은 `.agents/product-marketing.md.upstream` 로 저장되니 필요시 수동 병합.
 
             **업스트림 commit**: ${{ github.sha }}
