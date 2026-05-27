@@ -1,0 +1,19 @@
+{
+  "name": "dewy-marketing-skills",
+  "owner": {
+    "name": "Dewy Team",
+    "url": "https://dewy-wedding.com"
+  },
+  "metadata": {
+    "description": "Dewy(한국 웨딩 AI 플래너) 서비스 컨텍스트와 한국 결혼 시장 도메인 지식을 사전 주입한 마케팅 스킬 모음. coreyhaines31/marketingskills 기반.",
+    "version": "0.1.0",
+    "repository": "https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills"
+  },
+  "plugins": [
+    {
+      "name": "dewy-marketing-skills",
+      "description": "Dewy 전용 마케팅 스킬 10종 + 한국 웨딩 시장 레퍼런스 + 사전 작성된 product-marketing 컨텍스트",
+      "source": "./"
+    }
+  ]
+}

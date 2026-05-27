@@ -1,0 +1,13 @@
+{
+  "name": "dewy-marketing-skills",
+  "description": "Dewy(한국 웨딩 AI 플래너) 최적화 마케팅 스킬 — 네이버/카카오 광고, 한국 ASO, 한국 웨딩 톤 카피, D-Day 기반 라이프사이클",
+  "version": "0.1.0",
+  "author": {
+    "name": "Dewy Team",
+    "url": "https://dewy-wedding.com"
+  },
+  "homepage": "https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills",
+  "repository": "https://github.com/hyoeun979704-web/weddy_wedding_planer_ai_marketingskills",
+  "license": "MIT",
+  "skills": "./skills"
+}
